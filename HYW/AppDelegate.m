@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //https://git.oschina.net/huyuanwei/hywshop.git
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController *vc =[[ViewController alloc] init];
+    vc.view.backgroundColor=[UIColor greenColor];
+    self.window.rootViewController =vc;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
